@@ -88,6 +88,18 @@ p{margin:0 0 16px}
 .job .when{color:var(--muted);font-size:15px;margin-bottom:10px}
 .job ul{margin:0;padding-left:20px}
 .job li{margin-bottom:6px}
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px}
+.case{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;text-decoration:none;color:var(--text);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.case:hover,.case:focus-visible{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 12px 28px rgba(0,0,0,.35);color:var(--text)}
+.case-img{aspect-ratio:16/9;overflow:hidden;background:#111;border-bottom:1px solid var(--line)}
+.case-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.case:hover .case-img img{transform:scale(1.04)}
+.case-body{display:flex;flex-direction:column;flex:1;padding:20px 22px 22px}
+.case-tags{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.case h3{font-size:22px;color:var(--text);margin-bottom:8px}
+.case-result{color:var(--muted);font-size:15.5px;margin-bottom:18px}
+.case-cta{margin-top:auto;font-weight:600;font-size:15px;color:var(--gold-2)}
+.case:hover .case-cta span{display:inline-block;transform:translateX(4px)}
 /* one employer, several roles */
 .company{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:24px 26px 6px;margin-bottom:30px;position:relative}
 .company-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px;margin-bottom:22px;padding-bottom:16px;border-bottom:1px solid var(--line)}
@@ -245,13 +257,62 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:14px}
 <section id="case-studies">
   <div class="wrap">
     <h2>Selected case studies</h2>
-    <div class="cards">
-      <div class="card"><h3>The Monetization Pivot</h3><p class="muted">Repackaged a single-customer feature for the full book of business and launched it with a lean campaign. Result: the company's highest pipeline-generating product of the year, with shorter sales cycles.</p></div>
-      <div class="card"><h3>Portfolio Transformation</h3><p class="muted">Moved an underused SMB and mid-market portfolio to enterprise-level engagement with data-driven benchmarking and value-based lifecycle management. Result: an average 1,700% NRR increase across the targeted accounts.</p></div>
-      <div class="card"><h3>Whitespace Intelligence Engine</h3><p class="muted">Built a CRM-integrated whitespace model that values every account in real time. Result: a growth roadmap used for forecasting, investor storytelling and targeted upsell campaigns.</p></div>
-      <div class="card"><h3>The Roadshow Model</h3><p class="muted">Designed partner-hosted regional events that turned customer clusters into sales funnels. Result: 100% prospect conversion within 90 days and one of the top three revenue strategies, at low acquisition cost.</p></div>
-      <div class="card"><h3>The Retention Engine</h3><p class="muted">Created a cross-functional churn-risk dashboard for the C-suite. Result: 77% more churn risk saved and 59% faster response times.</p></div>
-      <div class="card"><h3>Public Capital Program</h3><p class="muted">Led a data and outreach strategy for a voter-approved, multi-million-dollar school capital program. Result: 1,132% increase in local small business participation.</p></div>
+    <p class="muted" style="max-width:760px;margin:-14px 0 32px">Full write-ups of the situation, strategy and measurable results behind the numbers. Each opens in a new tab.</p>
+    <div class="cases">
+      <a class="case" href="https://gamma.app/docs/civgbqer2y1d5jv" target="_blank" rel="noopener" aria-label="Read case study: The Monetization Pivot">
+        <div class="case-img"><img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fill/width:800/height:450/https://cdn.gamma.app/mux3kbhkt1egh4q/generated-images/BGcbAMW3xr42zQPiihVOl.png" alt="" loading="lazy" width="800" height="450"></div>
+        <div class="case-body">
+          <div class="case-tags">SaaS &middot; Product monetization</div>
+          <h3>The Monetization Pivot</h3>
+          <p class="case-result">From bespoke feature to the company's #1 pipeline-generating product of the year</p>
+          <span class="case-cta">Read case study <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+      <a class="case" href="https://gamma.app/docs/qqnkofbnrjm29s6" target="_blank" rel="noopener" aria-label="Read case study: Portfolio Transformation">
+        <div class="case-img"><img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fill/width:800/height:450/https://cdn.gamma.app/mux3kbhkt1egh4q/generated-images/160gjbVdXAHXjW86ygD3M.png" alt="" loading="lazy" width="800" height="450"></div>
+        <div class="case-body">
+          <div class="case-tags">SaaS &middot; Revenue architecture</div>
+          <h3>Portfolio Transformation</h3>
+          <p class="case-result">1,700% average NRR increase across targeted SMB and mid-market accounts</p>
+          <span class="case-cta">Read case study <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+      <a class="case" href="https://gamma.app/docs/bkimv2vpvlqv62d" target="_blank" rel="noopener" aria-label="Read case study: Whitespace Intelligence Engine">
+        <div class="case-img"><img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fill/width:800/height:450/https://cdn.gamma.app/mux3kbhkt1egh4q/generated-images/ti9jXWGQ4RNB4LuQhTLt2.png" alt="" loading="lazy" width="800" height="450"></div>
+        <div class="case-body">
+          <div class="case-tags">SaaS &middot; GovTech &middot; Revenue strategy</div>
+          <h3>Whitespace Intelligence Engine</h3>
+          <p class="case-result">Real-time valuation of the full book, built for forecasting, investors and M&amp;A</p>
+          <span class="case-cta">Read case study <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+      <a class="case" href="https://gamma.app/docs/ze3do3jjtw7twm9" target="_blank" rel="noopener" aria-label="Read case study: The Roadshow Model">
+        <div class="case-img"><img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fill/width:800/height:450/https://cdn.gamma.app/mux3kbhkt1egh4q/generated-images/CaBatEM2LdqhH0j_yrtGQ.png" alt="" loading="lazy" width="800" height="450"></div>
+        <div class="case-body">
+          <div class="case-tags">GovTech &middot; Community-led sales</div>
+          <h3>The Roadshow Model</h3>
+          <p class="case-result">100% prospect conversion within 90 days; a top-three revenue pillar</p>
+          <span class="case-cta">Read case study <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+      <a class="case" href="https://gamma.app/docs/k0ydcu7jauohcew" target="_blank" rel="noopener" aria-label="Read case study: The Retention Engine">
+        <div class="case-img"><img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fill/width:800/height:450/https://cdn.gamma.app/mux3kbhkt1egh4q/generated-images/Ba4XzCrzRM28rZv2ewh7h.png" alt="" loading="lazy" width="800" height="450"></div>
+        <div class="case-body">
+          <div class="case-tags">SaaS &middot; GovTech &middot; NRR</div>
+          <h3>The Retention Engine</h3>
+          <p class="case-result">77% more churn risk saved and 59% faster response times</p>
+          <span class="case-cta">Read case study <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
+      <a class="case" href="https://gamma.app/docs/vrfzehzva4rtq9f" target="_blank" rel="noopener" aria-label="Read case study: Public Capital Program">
+        <div class="case-img"><img src="https://imgproxy.gamma.app/resize/quality:80/resizing_type:fill/width:800/height:450/https://cdn.gamma.app/mux3kbhkt1egh4q/generated-images/swT31gcHLTIhbusoZAzaE.png" alt="" loading="lazy" width="800" height="450"></div>
+        <div class="case-body">
+          <div class="case-tags">Public sector &middot; Capital projects</div>
+          <h3>Public Capital Program</h3>
+          <p class="case-result">1,132% increase in local small business participation</p>
+          <span class="case-cta">Read case study <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
