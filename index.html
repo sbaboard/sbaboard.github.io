@@ -88,6 +88,23 @@ p{margin:0 0 16px}
 .job .when{color:var(--muted);font-size:15px;margin-bottom:10px}
 .job ul{margin:0;padding-left:20px}
 .job li{margin-bottom:6px}
+/* one employer, several roles */
+.company{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:24px 26px 6px;margin-bottom:30px;position:relative}
+.company-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px;margin-bottom:22px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.company-head h3{font-size:26px;margin:0}
+.company-head .meta{color:var(--muted);font-size:15px}
+.company-head .meta strong{color:var(--gold-2);font-weight:600}
+.roles{position:relative;padding-left:30px}
+.roles:before{content:"";position:absolute;left:6px;top:8px;bottom:34px;width:2px;background:linear-gradient(var(--gold),rgba(217,179,90,.35))}
+.role{position:relative;padding-bottom:22px}
+.role:before{content:"";position:absolute;left:-30px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--panel);border:2px solid var(--gold)}
+.role.current:before{background:var(--gold)}
+.role h4{font-family:var(--serif);font-weight:500;font-size:21px;color:var(--text);margin:0 0 2px}
+.role .when{color:var(--muted);font-size:15px;margin-bottom:10px}
+.role ul{margin:0;padding-left:20px}
+.role li{margin-bottom:6px}
+.promo{position:relative;display:inline-flex;align-items:center;gap:6px;margin:0 0 20px -2px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);background:var(--gold);border-radius:999px;padding:4px 12px 4px 10px}
+@media(max-width:600px){.company{padding:20px 18px 4px}.roles{padding-left:26px}.role:before{left:-26px}}
 /* list */
 .numbered{counter-reset:n;display:grid;gap:12px}
 .numbered div{counter-increment:n;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:16px 20px 16px 70px;position:relative}
@@ -173,8 +190,15 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:14px}
         <li>Advises SaaS companies on upsell motions, NRR expansion and ARR retention</li>
       </ul>
     </div>
-    <div class="job">
-      <h3>Director of Customer Advocacy and Insight</h3>
+    <div class="job" style="border-left-color:var(--gold);padding-left:26px;padding-bottom:0">
+    <div class="company" style="margin-left:0">
+      <div class="company-head">
+        <h3>B2Gnow</h3>
+        <div class="meta">Jun 2022 to Jun 2026 &middot; 4 years &middot; <strong>3 roles, promoted twice</strong></div>
+      </div>
+      <div class="roles">
+    <div class="role current">
+      <h4>Director of Customer Advocacy and Insight</h4>
       <div class="when">Mar 2026 to Jun 2026</div>
       <ul>
         <li><strong>Customer Insights &amp; Feedback Loops:</strong> Gathered and analyzed cross-channel customer feedback to identify pain points, emerging user trends, and actionable opportunities for product and service enhancements.</li>
@@ -183,8 +207,9 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:14px}
         <li><strong>Customer Retention &amp; Experience:</strong> Influenced initiatives designed to elevate overall satisfaction, improve user experience, foster brand loyalty, and reduce churn.</li>
       </ul>
     </div>
-    <div class="job">
-      <h3>Director of Account Management &amp; Renewals, B2Gnow</h3>
+    <div class="promo">&uarr; Promoted</div>
+    <div class="role">
+      <h4>Director of Account Management &amp; Renewals</h4>
       <div class="when">Mar 2023 to Mar 2026</div>
       <ul>
         <li>Built and led a 4-person Renewals and Upsell team; set quota and NRR targets and beat company sales goals</li>
@@ -193,13 +218,17 @@ footer{padding:40px 0;text-align:center;color:var(--muted);font-size:14px}
         <li>Built executive business cases that drove ARR increases above 1,000% for key accounts</li>
       </ul>
     </div>
-    <div class="job">
-      <h3>Enterprise Customer Success Manager, B2Gnow</h3>
+    <div class="promo">&uarr; Promoted</div>
+    <div class="role">
+      <h4>Enterprise Customer Success Manager</h4>
       <div class="when">Jun 2022 to Mar 2023</div>
       <ul>
         <li>99% retention across a $3.5M book of 40 GovTech and corporate accounts</li>
         <li>Led executive business reviews to prove ROI and catch churn risk early</li>
       </ul>
+    </div>
+      </div>
+    </div>
     </div>
     <div class="job">
       <h3>Contract Compliance Manager, Palm Beach County School District</h3>
